@@ -1,401 +1,363 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Оля — PR и медийное позиционирование</title>
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-
-  <style>
-
-    *{
-      margin:0;
-      padding:0;
-      box-sizing:border-box;
-    }
-
-    body{
-      font-family:'Inter',sans-serif;
-      background:#f7f5f2;
-      color:#111;
-      line-height:1.5;
-      overflow-x:hidden;
-    }
-
-    img{
-      max-width:100%;
-      display:block;
-    }
-
-    a{
-      text-decoration:none;
-      color:inherit;
-    }
-
-    .container{
-      width:min(1240px,92%);
-      margin:auto;
-    }
-
-    section{
-      padding:90px 0;
-    }
-
-    h1,h2,h3{
-      font-family:'Cormorant Garamond',serif;
-      font-weight:500;
-      line-height:1;
-    }
-
-    h1{
-      font-size:82px;
-      letter-spacing:-2px;
-      margin-bottom:30px;
-    }
-
-    h2{
-      font-size:58px;
-      margin-bottom:25px;
-    }
-
-    p{
-      font-size:18px;
-      color:#4a4a4a;
-    }
-
-    .hero{
-      padding-top:60px;
-      padding-bottom:40px;
-    }
-
-    .hero-grid{
-      display:grid;
-      grid-template-columns:1.1fr 1fr;
-      gap:80px;
-      align-items:center;
-    }
-
-    .hero-text p{
-      max-width:500px;
-      font-size:20px;
-      margin-bottom:35px;
-    }
-
-    .button{
-      display:inline-flex;
-      align-items:center;
-      gap:10px;
-      background:#0d1320;
-      color:white;
-      padding:16px 28px;
-      border-radius:999px;
-      font-size:15px;
-      transition:.2s;
-    }
-
-    .button:hover{
-      transform:translateY(-2px);
-    }
-
-    .hero-image img{
-      border-radius:28px;
-      object-fit:cover;
-      height:760px;
-      width:100%;
-    }
-
-    .logos{
-      border-top:1px solid #e5e0db;
-      border-bottom:1px solid #e5e0db;
-      padding:38px 0;
-      background:white;
-    }
-
-    .logos-row{
-      display:flex;
-      flex-wrap:wrap;
-      align-items:center;
-      justify-content:center;
-      gap:54px;
-    }
-
-    .logos-row img{
-      height:30px;
-      object-fit:contain;
-      opacity:.42;
-      filter:brightness(0);
-      transition:.2s;
-    }
-
-    .logos-row img:hover{
-      opacity:.7;
-    }
-
-    .statement{
-      background:#f1ece7;
-    }
-
-    .statement-grid{
-      display:grid;
-      grid-template-columns:1fr 1fr;
-      gap:90px;
-      align-items:start;
-    }
-
-    .statement-right{
-      padding-top:20px;
-    }
-
-    .statement-right p{
-      margin-bottom:18px;
-      font-size:20px;
-    }
-
-    .about{
-      padding-top:110px;
-    }
-
-    .about-grid{
-      display:grid;
-      grid-template-columns:1fr 1fr;
-      gap:70px;
-      align-items:center;
-    }
-
-    .about-grid img{
-      border-radius:24px;
-      height:560px;
-      object-fit:cover;
-    }
-
-    .small-title{
-      text-transform:uppercase;
-      letter-spacing:2px;
-      font-size:12px;
-      margin-bottom:18px;
-      color:#7f7f7f;
-    }
-
-    .about-text h3{
-      font-size:54px;
-      margin-bottom:24px;
-    }
-
-    .about-text p{
-      margin-bottom:20px;
-      max-width:560px;
-    }
-
-    .section-title{
-      margin-bottom:55px;
-    }
-
-    .case{
-      margin-bottom:130px;
-    }
-
-    .case-head{
-      display:flex;
-      justify-content:space-between;
-      align-items:end;
-      margin-bottom:30px;
-      gap:30px;
-    }
-
-    .case-head h2{
-      font-size:54px;
-      margin-bottom:0;
-    }
-
-    .case-head span{
-      font-style:italic;
-      opacity:.6;
-    }
-
-    .case-layout{
-      display:grid;
-      grid-template-columns:1.2fr 1fr;
-      gap:26px;
-    }
-
-    .main-card img{
-      border-radius:22px;
-      width:100%;
-      height:540px;
-      object-fit:cover;
-    }
-
-    .main-caption{
-      margin-top:18px;
-      font-size:16px;
-      color:#666;
-    }
-
-    .grid-cards{
-      display:grid;
-      grid-template-columns:1fr 1fr;
-      gap:18px;
-    }
-
-    .mini-card{
-      background:white;
-      border-radius:20px;
-      overflow:hidden;
-      border:1px solid #ece7e1;
-    }
-
-    .mini-card img{
-      height:220px;
-      width:100%;
-      object-fit:cover;
-    }
-
-    .mini-content{
-      padding:18px;
-    }
-
-    .mini-content h4{
-      font-size:18px;
-      margin-bottom:10px;
-      line-height:1.3;
-    }
-
-    .mini-content p{
-      font-size:14px;
-      color:#666;
-    }
-
-    .tags{
-      display:flex;
-      flex-wrap:wrap;
-      gap:10px;
-      margin-top:22px;
-    }
-
-    .tag{
-      border:1px solid #d9d4cf;
-      padding:10px 14px;
-      border-radius:999px;
-      font-size:12px;
-      background:white;
-    }
-
-    .quote{
-      background:#08101f;
-      color:white;
-      padding:120px 0;
-    }
-
-    .quote-grid{
-      display:grid;
-      grid-template-columns:1fr auto;
-      gap:60px;
-      align-items:end;
-    }
-
-    .quote h2{
-      color:white;
-      max-width:760px;
-      font-size:68px;
-    }
-
-    footer{
-      padding:34px 0;
-      background:white;
-      border-top:1px solid #e7e2dc;
-    }
-
-    .footer-grid{
-      display:flex;
-      justify-content:space-between;
-      gap:30px;
-      flex-wrap:wrap;
-      align-items:center;
-    }
-
-    .footer-links{
-      display:flex;
-      gap:28px;
-      flex-wrap:wrap;
-      color:#666;
-      font-size:15px;
-    }
-
-    .footer-name{
-      font-size:15px;
-      color:#777;
-    }
-
-    @media(max-width:1100px){
-
-      h1{
-        font-size:62px;
-      }
-
-      h2{
-        font-size:46px;
-      }
-
-      .hero-grid,
-      .statement-grid,
-      .about-grid,
-      .case-layout{
-        grid-template-columns:1fr;
-      }
-
-      .hero-image img{
-        height:560px;
-      }
-
-      .main-card img{
-        height:auto;
-      }
-
-    }
-
-    @media(max-width:768px){
-
-      section{
-        padding:70px 0;
-      }
-
-      h1{
-        font-size:48px;
-      }
-
-      h2{
-        font-size:38px;
-      }
-
-      .hero{
-        padding-top:30px;
-      }
-
-      .hero-image img{
-        height:420px;
-      }
-
-      .grid-cards{
-        grid-template-columns:1fr;
-      }
-
-      .quote h2{
-        font-size:44px;
-      }
-
-      .logos-row{
-        gap:34px;
-      }
-
-      .logos-row img{
-        height:24px;
-      }
-
-    }
-
-  </style>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+<title>Ольга Гусарова — PR & Media Strategist</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+font-family:'Inter',sans-serif;
+background:#f4f1ec;
+color:#111;
+-webkit-font-smoothing:antialiased;
+overflow-x:hidden;
+}
+
+img{
+display:block;
+width:100%;
+}
+
+.container{
+width:100%;
+max-width:1440px;
+margin:0 auto;
+padding:0 28px;
+}
+
+section{
+padding:120px 0;
+}
+
+/* HERO */
+
+.hero{
+padding-top:70px;
+padding-bottom:100px;
+}
+
+.hero-grid{
+display:grid;
+grid-template-columns:1.1fr 0.9fr;
+gap:80px;
+align-items:center;
+}
+
+.hero h1{
+font-size:84px;
+line-height:0.95;
+letter-spacing:-4px;
+font-weight:700;
+margin-bottom:28px;
+}
+
+.hero p{
+font-size:22px;
+line-height:1.6;
+color:#444;
+max-width:650px;
+margin-bottom:60px;
+}
+
+.hero-image{
+height:760px;
+border-radius:34px;
+background:#d7d2cb;
+}
+
+.logo-row{
+display:flex;
+flex-wrap:wrap;
+gap:60px;
+align-items:center;
+opacity:0.5;
+}
+
+.logo-row img{
+height:26px;
+width:auto;
+object-fit:contain;
+filter:brightness(0);
+}
+
+/* THESIS */
+
+.thesis{
+padding-top:60px;
+padding-bottom:60px;
+}
+
+.thesis-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:80px;
+}
+
+.thesis-item{
+font-size:44px;
+line-height:1.12;
+letter-spacing:-2px;
+font-weight:500;
+padding-bottom:50px;
+border-bottom:1px solid rgba(0,0,0,0.08);
+}
+
+/* SECTION */
+
+.section-label{
+font-size:13px;
+letter-spacing:2px;
+text-transform:uppercase;
+color:#777;
+margin-bottom:24px;
+}
+
+.section-title{
+font-size:64px;
+line-height:0.95;
+letter-spacing:-3px;
+font-weight:700;
+margin-bottom:24px;
+}
+
+.section-sub{
+font-size:20px;
+line-height:1.6;
+color:#555;
+max-width:760px;
+margin-bottom:70px;
+}
+
+/* CARDS */
+
+.case-grid{
+display:grid;
+gap:24px;
+}
+
+.card{
+overflow:hidden;
+border-radius:28px;
+background:white;
+box-shadow:0 10px 40px rgba(0,0,0,0.06);
+}
+
+.card img{
+width:100%;
+height:100%;
+object-fit:cover;
+object-position:top;
+}
+
+/* DOCTOR */
+
+.doctor-layout{
+display:grid;
+grid-template-columns:1.1fr 0.9fr;
+gap:24px;
+margin-bottom:24px;
+}
+
+.psy-card{
+height:760px;
+}
+
+.side-stack{
+display:grid;
+grid-template-rows:1fr 1fr;
+gap:24px;
+}
+
+.medium-card{
+height:368px;
+}
+
+.bottom-grid{
+display:grid;
+grid-template-columns:1fr 1fr 1fr;
+gap:24px;
+}
+
+.small-card{
+height:260px;
+}
+
+.wide-card{
+height:420px;
+margin-top:24px;
+}
+
+/* SURF */
+
+.surf-main{
+height:620px;
+margin-bottom:24px;
+}
+
+.surf-grid{
+display:grid;
+grid-template-columns:1fr 1fr 1fr;
+gap:24px;
+margin-bottom:24px;
+}
+
+.surf-small{
+height:320px;
+}
+
+.forbes-small{
+height:220px;
+max-width:520px;
+}
+
+/* STYLIST */
+
+.stylist-layout{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:24px;
+margin-bottom:24px;
+}
+
+.big-vertical{
+height:760px;
+}
+
+.stylist-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:24px;
+}
+
+.horizontal{
+height:320px;
+}
+
+/* CTA */
+
+.cta{
+padding-top:160px;
+padding-bottom:160px;
+text-align:center;
+}
+
+.cta h2{
+font-size:72px;
+line-height:0.95;
+letter-spacing:-3px;
+margin-bottom:32px;
+}
+
+.cta p{
+font-size:22px;
+line-height:1.6;
+max-width:760px;
+margin:0 auto 50px;
+color:#555;
+}
+
+.button{
+display:inline-flex;
+align-items:center;
+justify-content:center;
+padding:18px 34px;
+border-radius:999px;
+background:#111;
+color:white;
+text-decoration:none;
+font-weight:600;
+font-size:16px;
+transition:0.25s;
+}
+
+.button:hover{
+opacity:0.85;
+}
+
+/* MOBILE */
+
+@media(max-width:980px){
+
+section{
+padding:80px 0;
+}
+
+.hero-grid,
+.thesis-grid,
+.doctor-layout,
+.bottom-grid,
+.surf-grid,
+.stylist-layout,
+.stylist-grid{
+grid-template-columns:1fr;
+}
+
+.hero h1{
+font-size:54px;
+}
+
+.hero p{
+font-size:18px;
+}
+
+.hero-image{
+height:480px;
+}
+
+.thesis-item{
+font-size:30px;
+}
+
+.section-title{
+font-size:44px;
+}
+
+.section-sub{
+font-size:18px;
+}
+
+.psy-card,
+.big-vertical,
+.medium-card,
+.small-card,
+.horizontal,
+.surf-small,
+.surf-main,
+.wide-card{
+height:auto;
+}
+
+.card img{
+height:auto;
+}
+
+.cta h2{
+font-size:46px;
+}
+
+.cta p{
+font-size:18px;
+}
+
+}
+
+</style>
 </head>
 
 <body>
@@ -404,349 +366,240 @@
 
 <section class="hero">
 
-  <div class="container">
+<div class="container">
 
-    <div class="hero-grid">
+<div class="hero-grid">
 
-      <div class="hero-text">
+<div>
 
-        <h1>
-          Медийность<br>
-          создаёт доверие<br>
-          ещё до знакомства.
-        </h1>
+<h1>
+Ольга Гусарова<br>
+PR & Media Strategist
+</h1>
 
-        <p>
-          Люди склонны выбирать тех, кого уже знают.
-          Станьте знакомым для своей аудитории.
-        </p>
+<p>
+Работа с экспертами, брендами и публичным образом через медиа, стратегию и влияние.
+</p>
 
-        <a href="#" class="button">
-          Обсудить проект
-        </a>
+<div class="logo-row">
 
-      </div>
+<img src="images/forbes.svg">
+<img src="images/mentoday.svg">
+<img src="images/vokrugsveta.svg">
+<img src="images/lenta.svg">
 
-      <div class="hero-image">
-        <img src="images/psy.jpg" alt="">
-      </div>
+</div>
 
-    </div>
+</div>
 
-  </div>
+<div class="hero-image"></div>
 
-</section>
+</div>
 
-<!-- LOGOS -->
-
-<section class="logos">
-
-  <div class="container">
-
-    <div class="logos-row">
-
-      <img src="images/Forbes_idvIzRQKLx_0.svg" alt="">
-      <img src="images/Psychologies_Russia_idyZu8JEtE_1.jpeg" alt="">
-      <img src="images/Men_Today_idn96qUO9C_1.svg" alt="">
-      <img src="images/RT_idNh_l3Rt7_0.jpeg" alt="">
-      <img src="images/Лента-ру_id9PU_kbiH_1.svg" alt="">
-      <img src="images/Вокруг_света_idKF4YMesT_1.svg" alt="">
-      <img src="images/id4Q2a9Cgi_1776925022945.svg" alt="">
-
-    </div>
-
-  </div>
+</div>
 
 </section>
 
-<!-- STATEMENT -->
+<!-- THESIS -->
 
-<section class="statement">
+<section class="thesis">
 
-  <div class="container">
+<div class="container">
 
-    <div class="statement-grid">
+<div class="thesis-grid">
 
-      <div>
-        <h2>
-          Сильное присутствие<br>
-          формирует<br>
-          долгосрочное доверие.
-        </h2>
-      </div>
+<div class="thesis-item">
+Люди выбирают тех, кого уже знают.
+</div>
 
-      <div class="statement-right">
+<div class="thesis-item">
+Медийность создаёт доверие ещё до знакомства.
+</div>
 
-        <p>Публичный образ — продолжение профессиональной репутации.</p>
-        <p>СМИ усиливают восприятие эксперта.</p>
-        <p>Медийность закрепляет статус.</p>
-        <p>Профессиональный авторитет должен быть заметным.</p>
+<div class="thesis-item">
+Ваш публичный образ влияет на решения раньше, чем начинается разговор.
+</div>
 
-      </div>
+<div class="thesis-item">
+Сегодня экспертиза без присутствия — это невидимая экспертиза.
+</div>
 
-    </div>
+</div>
 
-  </div>
-
-</section>
-
-<!-- ABOUT -->
-
-<section class="about">
-
-  <div class="container">
-
-    <div class="about-grid">
-
-      <img src="images/forbessurfilyablack.jpg" alt="">
-
-      <div class="about-text">
-
-        <div class="small-title">Обо мне</div>
-
-        <h3>
-          Я работаю с экспертами,
-          профессионалами
-          и сильными личными брендами.
-        </h3>
-
-        <p>
-          Через медиа, digital-присутствие и стратегическую коммуникацию
-          помогаю специалистам становиться узнаваемыми,
-          усиливать авторитет и формировать устойчивый публичный образ.
-        </p>
-
-        <p>
-          Минимум хаоса.
-          Максимум точности, репутации и правильного позиционирования.
-        </p>
-
-      </div>
-
-    </div>
-
-  </div>
+</div>
 
 </section>
 
-<!-- CASE 1 -->
+<!-- DOCTOR -->
 
-<section class="case">
+<section>
 
-  <div class="container">
+<div class="container">
 
-    <div class="case-head">
+<div class="section-label">Кейс</div>
 
-      <h2>
-        Анастасия Журавская —
-        <span>невролог, психиатр</span>
-      </h2>
+<h2 class="section-title">
+Врач-невролог
+</h2>
 
-    </div>
+<p class="section-sub">
+Системная работа с экспертным позиционированием врача через федеральные медиа, телевидение и экспертные комментарии.
+</p>
 
-    <div class="case-layout">
+<div class="doctor-layout">
 
-      <div class="main-card">
+<div class="card psy-card">
+<img src="images/psy.jpg">
+</div>
 
-        <img src="images/doctortv.jpg" alt="">
+<div class="side-stack">
 
-        <div class="main-caption">
-          Медийное позиционирование врача, федеральные СМИ,
-          ТВ, экспертные комментарии и lifestyle-коллаборации.
-        </div>
+<div class="card medium-card">
+<img src="images/doctortv.jpg">
+</div>
 
-        <div class="tags">
-          <div class="tag">Forbes</div>
-          <div class="tag">RT</div>
-          <div class="tag">Psychologies</div>
-          <div class="tag">Men Today</div>
-          <div class="tag">TV</div>
-        </div>
+<div class="card medium-card">
+<img src="images/doctormentoday.jpg">
+</div>
 
-      </div>
+</div>
 
-      <div class="grid-cards">
+</div>
 
-        <div class="mini-card">
-          <img src="images/psy.jpg" alt="">
-        </div>
+<div class="bottom-grid">
 
-        <div class="mini-card">
-          <img src="images/doctormentoday.jpg" alt="">
-        </div>
+<div class="card small-card">
+<img src="images/rtdoctor.jpg">
+</div>
 
-        <div class="mini-card">
-          <img src="images/rtdoctor.jpg" alt="">
-        </div>
+<div class="card small-card">
+<img src="images/gazetarudoctor.jpg">
+</div>
 
-        <div class="mini-card">
-          <img src="images/gazetarudoctor.jpg" alt="">
-        </div>
+<div class="card small-card">
+<img src="images/lentarudoc.jpg">
+</div>
 
-      </div>
+</div>
 
-    </div>
+<div class="card wide-card">
+<img src="images/lifedoctor.jpg">
+</div>
 
-  </div>
+</div>
 
 </section>
 
-<!-- CASE 2 -->
+<!-- SURF -->
 
-<section class="case">
+<section>
 
-  <div class="container">
+<div class="container">
 
-    <div class="case-head">
+<div class="section-label">Кейс</div>
 
-      <h2>
-        Илья Чайка —
-        <span>surfing, lifestyle</span>
-      </h2>
+<h2 class="section-title">
+Илья Чайка
+</h2>
 
-    </div>
+<p class="section-sub">
+Позиционирование профессионального серфера через lifestyle-медиа, спортивные медиа и международные упоминания.
+</p>
 
-    <div class="case-layout">
+<div class="card surf-main">
+<img src="images/forbessurfilyablack.jpg">
+</div>
 
-      <div class="main-card">
+<div class="surf-grid">
 
-        <img src="images/forbessurfilyablack.jpg" alt="">
+<div class="card surf-small">
+<img src="images/mentodayilya.jpg">
+</div>
 
-        <div class="main-caption">
-          Lifestyle-медиа, спортивная экспертиза,
-          позиционирование серфинга как статуса,
-          осознанности и интеллектуального отдыха.
-        </div>
+<div class="card surf-small">
+<img src="images/championatilya.jpg">
+</div>
 
-      </div>
+<div class="card surf-small">
+<img src="images/vokrugsvetailya.jpg">
+</div>
 
-      <div class="grid-cards">
+</div>
 
-        <div class="mini-card">
-          <img src="images/mentodayilya.jpg" alt="">
-        </div>
+<div class="card forbes-small">
+<img src="images/forbesusmentionilya.jpg">
+</div>
 
-        <div class="mini-card">
-          <img src="images/championatilya.jpg" alt="">
-        </div>
-
-        <div class="mini-card">
-          <img src="images/vokrugsvetailya.jpg" alt="">
-        </div>
-
-        <div class="mini-card">
-          <img src="images/forbesusmentionilya.jpg" alt="">
-        </div>
-
-      </div>
-
-    </div>
-
-  </div>
+</div>
 
 </section>
 
-<!-- CASE 3 -->
+<!-- STYLIST -->
 
-<section class="case">
+<section>
 
-  <div class="container">
+<div class="container">
 
-    <div class="case-head">
+<div class="section-label">Кейс</div>
 
-      <h2>
-        Аревик Кузнецова —
-        <span>fashion-эксперт</span>
-      </h2>
+<h2 class="section-title">
+Персональный стилист
+</h2>
 
-    </div>
+<p class="section-sub">
+Экспертное присутствие в lifestyle-медиа и федеральных изданиях.
+</p>
 
-    <div class="case-layout">
+<div class="stylist-layout">
 
-      <div class="main-card">
+<div class="card big-vertical">
+<img src="images/lisastylist.jpg">
+</div>
 
-        <img src="images/lisaexpert.jpg" alt="">
+<div class="card big-vertical">
+<img src="images/lisaexpert.jpg">
+</div>
 
-        <div class="main-caption">
-          Публикации в lifestyle-медиа,
-          экспертные комментарии,
-          fashion-позиционирование и digital-присутствие.
-        </div>
+</div>
 
-      </div>
+<div class="stylist-grid">
 
-      <div class="grid-cards">
+<div class="card horizontal">
+<img src="images/gazetarustylist.jpg">
+</div>
 
-        <div class="mini-card">
-          <img src="images/lisastylist.jpg" alt="">
-        </div>
+<div class="card horizontal">
+<img src="images/atylistkp.jpg">
+</div>
 
-        <div class="mini-card">
-          <img src="images/gazetarustylist.jpg" alt="">
-        </div>
+</div>
 
-        <div class="mini-card">
-          <img src="images/atylistkp.jpg" alt="">
-        </div>
-
-      </div>
-
-    </div>
-
-  </div>
+</div>
 
 </section>
 
-<!-- QUOTE -->
+<!-- CTA -->
 
-<section class="quote">
+<section class="cta">
 
-  <div class="container">
+<div class="container">
 
-    <div class="quote-grid">
+<h2>
+Публичный образ<br>
+тоже требует стратегии
+</h2>
 
-      <h2>
-        В современном мире
-        профессиональный авторитет
-        формируется публично.
-      </h2>
+<p>
+Работа с медиа, позиционированием, экспертностью и присутствием в информационном поле — для людей, которые серьёзно относятся к своему имени и своей профессии.
+</p>
 
-      <a href="#" class="button">
-        Обсудить проект
-      </a>
+<a href="#" class="button">
+Связаться
+</a>
 
-    </div>
-
-  </div>
+</div>
 
 </section>
-
-<!-- FOOTER -->
-
-<footer>
-
-  <div class="container">
-
-    <div class="footer-grid">
-
-      <div class="footer-name">
-        Оля — стратегический PR и медийное позиционирование
-      </div>
-
-      <div class="footer-links">
-
-        <a href="#">Обо мне</a>
-        <a href="#">Кейсы</a>
-        <a href="#">Услуги</a>
-        <a href="#">Контакты</a>
-
-      </div>
-
-    </div>
-
-  </div>
-
-</footer>
 
 </body>
 </html>
