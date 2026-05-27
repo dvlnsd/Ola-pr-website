@@ -2,21 +2,22 @@
 <html lang="ru">
 <head>
 <meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
 <title>Ольга Гусарова — стратегический PR и медийное позиционирование</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
 <style>
 
 :root{
 --bg:#f4f1eb;
---text:#161616;
---muted:#6b6b6b;
---line:#d9d4cb;
---accent:#111;
+--text:#151515;
+--muted:#76716a;
+--line:#d8d1c7;
 }
 
 *{
@@ -33,8 +34,8 @@ body{
 background:var(--bg);
 color:var(--text);
 font-family:'Inter',sans-serif;
-line-height:1.6;
 -webkit-font-smoothing:antialiased;
+line-height:1.6;
 }
 
 img{
@@ -43,7 +44,7 @@ display:block;
 }
 
 .container{
-width:min(1320px,92%);
+width:min(1380px,92%);
 margin:0 auto;
 }
 
@@ -55,12 +56,12 @@ border-bottom:1px solid var(--line);
 /* NAV */
 
 nav{
-padding:28px 0;
+padding:26px 0;
 position:sticky;
 top:0;
-backdrop-filter:blur(16px);
-background:rgba(244,241,235,.82);
-z-index:50;
+z-index:100;
+backdrop-filter:blur(14px);
+background:rgba(244,241,235,.88);
 border-bottom:1px solid rgba(0,0,0,.04);
 }
 
@@ -72,23 +73,23 @@ align-items:center;
 
 .logo{
 font-family:'Cormorant Garamond',serif;
-font-size:30px;
+font-size:34px;
 font-weight:700;
 letter-spacing:.02em;
 }
 
-.nav-right{
+.nav-links{
 display:flex;
-gap:32px;
+gap:34px;
 align-items:center;
 }
 
-.nav-right a{
+.nav-links a{
 text-decoration:none;
 color:var(--text);
-font-size:14px;
+font-size:13px;
+letter-spacing:.12em;
 text-transform:uppercase;
-letter-spacing:.08em;
 }
 
 /* HERO */
@@ -100,13 +101,9 @@ padding-bottom:90px;
 
 .hero-grid{
 display:grid;
-grid-template-columns:1.1fr .9fr;
+grid-template-columns:1fr 1fr;
 gap:80px;
 align-items:center;
-}
-
-.hero-text{
-max-width:680px;
 }
 
 .kicker{
@@ -114,7 +111,7 @@ font-size:13px;
 letter-spacing:.18em;
 text-transform:uppercase;
 color:var(--muted);
-margin-bottom:28px;
+margin-bottom:26px;
 }
 
 .hero h1{
@@ -122,8 +119,9 @@ font-family:'Cormorant Garamond',serif;
 font-size:88px;
 line-height:.92;
 font-weight:700;
-letter-spacing:-.03em;
-margin-bottom:40px;
+letter-spacing:-.04em;
+margin-bottom:34px;
+max-width:720px;
 }
 
 .hero-sub{
@@ -137,14 +135,14 @@ line-height:1.45;
 display:flex;
 gap:18px;
 flex-wrap:wrap;
-margin-bottom:55px;
+margin-bottom:46px;
 }
 
 .btn{
 padding:18px 32px;
 text-decoration:none;
-font-size:14px;
-letter-spacing:.08em;
+font-size:13px;
+letter-spacing:.12em;
 text-transform:uppercase;
 transition:.3s;
 }
@@ -170,10 +168,10 @@ color:#fff;
 }
 
 .hero-image{
-position:relative;
-overflow:hidden;
-border-radius:2px;
 height:760px;
+overflow:hidden;
+position:relative;
+background:#ddd;
 }
 
 .hero-image img{
@@ -187,29 +185,43 @@ filter:grayscale(100%);
 content:'';
 position:absolute;
 inset:0;
-background:rgba(0,0,0,.12);
+background:rgba(0,0,0,.08);
 }
 
 /* LOGOS */
 
 .logos{
-padding:55px 0;
-overflow:hidden;
+padding:60px 0;
 }
 
 .logo-row{
 display:flex;
-gap:80px;
+gap:64px;
 align-items:center;
-opacity:.48;
-flex-wrap:wrap;
 justify-content:center;
+flex-wrap:wrap;
+opacity:.55;
 }
 
 .logo-row img{
-height:32px;
+height:34px;
+width:auto;
 object-fit:contain;
-filter:grayscale(100%);
+
+filter:
+grayscale(100%)
+brightness(.2)
+opacity(.75);
+
+transition:.3s ease;
+}
+
+.logo-row img:hover{
+opacity:1;
+
+filter:
+grayscale(100%)
+brightness(.05);
 }
 
 /* THESIS */
@@ -221,21 +233,21 @@ gap:26px;
 }
 
 .thesis-card{
-padding:42px;
+padding:44px;
 border:1px solid var(--line);
-background:rgba(255,255,255,.35);
-min-height:230px;
+background:rgba(255,255,255,.28);
+min-height:260px;
 display:flex;
 flex-direction:column;
 justify-content:space-between;
 }
 
 .thesis-number{
-font-size:14px;
+font-size:13px;
 letter-spacing:.14em;
 text-transform:uppercase;
 color:var(--muted);
-margin-bottom:28px;
+margin-bottom:26px;
 }
 
 .thesis-card h3{
@@ -247,52 +259,54 @@ margin-bottom:24px;
 
 .thesis-card p{
 font-size:18px;
-max-width:90%;
+max-width:92%;
 }
 
-/* SERVICES */
+/* TITLES */
 
 .section-title{
 font-family:'Cormorant Garamond',serif;
-font-size:74px;
-line-height:.95;
-margin-bottom:30px;
+font-size:76px;
+line-height:.94;
+margin-bottom:28px;
 }
 
 .section-intro{
-max-width:760px;
+max-width:780px;
 font-size:21px;
 margin-bottom:70px;
 }
 
+/* SERVICES */
+
 .services-grid{
 display:grid;
 grid-template-columns:repeat(2,1fr);
-gap:34px;
+gap:28px;
 }
 
 .service{
-padding:46px;
+padding:48px;
 border:1px solid var(--line);
-background:rgba(255,255,255,.3);
+background:rgba(255,255,255,.28);
 }
 
 .service h3{
 font-family:'Cormorant Garamond',serif;
-font-size:46px;
-margin-bottom:24px;
+font-size:48px;
 line-height:1;
+margin-bottom:24px;
 }
 
 .service p{
 font-size:18px;
 margin-bottom:30px;
-color:#222;
+color:#232323;
 }
 
 .price{
-font-size:14px;
-letter-spacing:.12em;
+font-size:13px;
+letter-spacing:.14em;
 text-transform:uppercase;
 color:var(--muted);
 }
@@ -300,25 +314,29 @@ color:var(--muted);
 /* CASES */
 
 .case{
-margin-bottom:140px;
+margin-bottom:150px;
+}
+
+.case:last-child{
+margin-bottom:0;
 }
 
 .case-top{
 display:flex;
 justify-content:space-between;
 align-items:flex-end;
-gap:40px;
-margin-bottom:40px;
+gap:50px;
+margin-bottom:42px;
 }
 
 .case-title{
 font-family:'Cormorant Garamond',serif;
-font-size:64px;
-line-height:.95;
+font-size:66px;
+line-height:.94;
 }
 
 .case-description{
-max-width:480px;
+max-width:520px;
 font-size:18px;
 }
 
@@ -333,19 +351,19 @@ grid-auto-rows:240px;
 }
 
 .media-grid.stylist{
-grid-template-columns:1fr 1fr 1.2fr;
-grid-auto-rows:230px;
+grid-template-columns:1.3fr 1fr 1fr;
+grid-auto-rows:240px;
 }
 
 .media-grid.doctor{
-grid-template-columns:1.5fr 1fr 1fr;
+grid-template-columns:1.6fr 1fr 1fr;
 grid-auto-rows:240px;
 }
 
 .media-item{
 overflow:hidden;
+background:#e9e2d8;
 position:relative;
-background:#e9e4db;
 }
 
 .media-item img{
@@ -372,25 +390,28 @@ grid-column:span 2;
 .about-grid{
 display:grid;
 grid-template-columns:.8fr 1.2fr;
-gap:70px;
+gap:80px;
 align-items:center;
 }
 
 .about-photo{
-height:700px;
+height:720px;
 overflow:hidden;
+background:#ddd8cf;
 }
 
 .about-photo img{
 width:100%;
 height:100%;
 object-fit:cover;
+object-position:center;
+display:block;
 }
 
 .about-text h2{
 font-family:'Cormorant Garamond',serif;
 font-size:72px;
-line-height:.95;
+line-height:.94;
 margin-bottom:30px;
 }
 
@@ -409,20 +430,16 @@ padding:160px 0;
 
 .cta h2{
 font-family:'Cormorant Garamond',serif;
-font-size:90px;
+font-size:88px;
 line-height:.92;
-max-width:920px;
-margin:0 auto 34px;
+max-width:960px;
+margin:0 auto 36px;
 }
 
 .cta p{
 font-size:22px;
 max-width:760px;
-margin:0 auto 42px;
-}
-
-.cta .btn{
-display:inline-block;
+margin:0 auto 44px;
 }
 
 /* FOOTER */
@@ -441,21 +458,20 @@ flex-wrap:wrap;
 
 .footer-left{
 font-family:'Cormorant Garamond',serif;
-font-size:32px;
+font-size:34px;
 font-weight:700;
 }
 
 .footer-right{
 display:flex;
-gap:22px;
-flex-wrap:wrap;
+gap:24px;
 }
 
 .footer-right a{
 text-decoration:none;
 color:var(--text);
-font-size:14px;
-letter-spacing:.08em;
+font-size:13px;
+letter-spacing:.12em;
 text-transform:uppercase;
 }
 
@@ -478,11 +494,11 @@ font-size:64px;
 .about-text h2,
 .case-title,
 .cta h2{
-font-size:52px;
+font-size:54px;
 }
 
 .hero-image{
-height:520px;
+height:500px;
 }
 
 .media-grid.ilya,
@@ -508,7 +524,7 @@ align-items:flex-start;
 @media(max-width:640px){
 
 .hero h1{
-font-size:52px;
+font-size:50px;
 }
 
 .hero-sub,
@@ -524,7 +540,7 @@ height:420px;
 
 .thesis-card h3,
 .service h3{
-font-size:36px;
+font-size:38px;
 }
 
 }
@@ -535,11 +551,14 @@ font-size:36px;
 <body>
 
 <nav>
+
 <div class="container nav-inner">
 
-<div class="logo">ОЛЬГА ГУСАРОВА</div>
+<div class="logo">
+ОЛЬГА ГУСАРОВА
+</div>
 
-<div class="nav-right">
+<div class="nav-links">
 <a href="#services">Услуги</a>
 <a href="#cases">Кейсы</a>
 <a href="#about">Обо мне</a>
@@ -547,13 +566,14 @@ font-size:36px;
 </div>
 
 </div>
+
 </nav>
 
 <section class="hero">
 
 <div class="container hero-grid">
 
-<div class="hero-text">
+<div>
 
 <div class="kicker">
 Стратегический PR • Медийное позиционирование • Репутация
@@ -569,6 +589,7 @@ font-size:36px;
 </p>
 
 <div class="hero-buttons">
+
 <a href="https://t.me/ground_control_to_major_tom" target="_blank" class="btn btn-dark">
 Обсудить проект
 </a>
@@ -576,6 +597,7 @@ font-size:36px;
 <a href="#cases" class="btn btn-light">
 Смотреть кейсы
 </a>
+
 </div>
 
 </div>
@@ -594,10 +616,13 @@ font-size:36px;
 
 <div class="logo-row">
 
-<img src="images/Forbes_idvIzRQKLx_0.svg">
-<img src="images/Men_Today_idn96qUO9C_1.svg">
-<img src="images/Вокруг_света_idKF4YMesT_1.svg">
-<img src="images/Лента-ру_id9PU_kbiH_1.svg">
+<img src="images/Forbes_idvIzRQKLx_0.svg" alt="Forbes">
+
+<img src="images/Men_Today_idn96qUO9C_1.svg" alt="Men Today">
+
+<img src="images/Вокруг_света_idKF4YMesT_1.svg" alt="Вокруг Света">
+
+<img src="images/Лента-ру_id9PU_kbiH_1.svg" alt="Лента.ру">
 
 </div>
 
@@ -612,43 +637,75 @@ font-size:36px;
 <div class="thesis-grid">
 
 <div class="thesis-card">
-<div class="thesis-number">01</div>
+
 <div>
-<h3>Публичный образ влияет на восприятие вашей ценности.</h3>
+
+<div class="thesis-number">01</div>
+
+<h3>
+Публичный образ влияет на восприятие вашей ценности.
+</h3>
+
+</div>
+
 <p>
 Экспертность без присутствия в информационном поле остаётся незаметной.
 </p>
-</div>
+
 </div>
 
 <div class="thesis-card">
-<div class="thesis-number">02</div>
+
 <div>
-<h3>Профессиональный авторитет формируется публично.</h3>
+
+<div class="thesis-number">02</div>
+
+<h3>
+Профессиональный авторитет формируется публично.
+</h3>
+
+</div>
+
 <p>
 Сильным специалистам нужна сильная репутация.
 </p>
-</div>
+
 </div>
 
 <div class="thesis-card">
-<div class="thesis-number">03</div>
+
 <div>
-<h3>Люди выбирают тех, кого уже знают.</h3>
+
+<div class="thesis-number">03</div>
+
+<h3>
+Люди выбирают тех, кого уже знают.
+</h3>
+
+</div>
+
 <p>
 Медийность сокращает дистанцию между вами и аудиторией.
 </p>
-</div>
+
 </div>
 
 <div class="thesis-card">
-<div class="thesis-number">04</div>
+
 <div>
-<h3>PR — это архитектура доверия.</h3>
-<p>
-Публикации, комментарии и медиаформируют долгосрочное восприятие специалиста.
-</p>
+
+<div class="thesis-number">04</div>
+
+<h3>
+PR — это архитектура доверия.
+</h3>
+
 </div>
+
+<p>
+Публикации, комментарии и медиа формируют долгосрочное восприятие специалиста.
+</p>
+
 </div>
 
 </div>
@@ -666,60 +723,75 @@ font-size:36px;
 </h2>
 
 <p class="section-intro">
-Работаю с экспертами, wellness-проектами, врачами, брендами и специалистами, которым важно не просто присутствовать в интернете, а формировать устойчивый профессиональный образ.
+Работаю с экспертами, wellness-проектами и специалистами, которым важно выстроить устойчивое профессиональное присутствие в медиа и публичном поле.
 </p>
 
 <div class="services-grid">
 
 <div class="service">
-<h3>PR-сопровождение</h3>
+
+<h3>
+PR-сопровождение
+</h3>
 
 <p>
-Долгосрочная работа с медиа, публичным образом и репутацией специалиста.  
-Стратегия присутствия, инфоповоды, публикации, комментарии, коллаборации и развитие экспертного позиционирования.
+Долгосрочная работа с репутацией, медийностью и публичным образом специалиста.  
+Инфоповоды, публикации, комментарии, коллаборации и стратегия присутствия.
 </p>
 
 <div class="price">
 от 100 000 ₽ / месяц
 </div>
+
 </div>
 
 <div class="service">
-<h3>Публикации в СМИ</h3>
+
+<h3>
+Публикации в СМИ
+</h3>
 
 <p>
-Экспертные материалы, интервью, колонки, комментарии и статьи для российских и международных медиа.  
-Работа с редакциями и адаптация тем под инфополе.
+Статьи, комментарии, экспертные материалы, колонки и работа с редакциями российских и международных медиа.
 </p>
 
 <div class="price">
 от 10 000 ₽
 </div>
+
 </div>
 
 <div class="service">
-<h3>PR-стратегия</h3>
+
+<h3>
+PR-стратегия
+</h3>
 
 <p>
-Коммуникационная архитектура бренда: медиавекторы, позиционирование, темы, точки роста и стратегия присутствия в публичном поле.
+Коммуникационная архитектура бренда: медиавекторы, позиционирование, темы и долгосрочная стратегия присутствия.
 </p>
 
 <div class="price">
 от 50 000 ₽
 </div>
+
 </div>
 
 <div class="service">
-<h3>Консультации</h3>
+
+<h3>
+Консультации
+</h3>
 
 <p>
-Разбор текущего позиционирования, репутации, медиаприсутствия и возможностей роста.  
-Подходит экспертам и брендам, которым нужен внешний стратегический взгляд.
+Разбор текущего позиционирования, медийности и репутации.  
+Подходит экспертам и брендам, которым нужен стратегический внешний взгляд.
 </p>
 
 <div class="price">
 15 000 ₽
 </div>
+
 </div>
 
 </div>
@@ -735,9 +807,17 @@ font-size:36px;
 <div class="case">
 
 <div class="case-top">
+
 <div>
-<div class="kicker">Кейс</div>
-<h3 class="case-title">Илья Чайка</h3>
+
+<div class="kicker">
+Кейс
+</div>
+
+<h3 class="case-title">
+Илья Чайка
+</h3>
+
 </div>
 
 <p class="case-description">
@@ -776,14 +856,22 @@ font-size:36px;
 <div class="case">
 
 <div class="case-top">
+
 <div>
-<div class="kicker">Кейс</div>
-<h3 class="case-title">Аревик Кузнецова</h3>
+
+<div class="kicker">
+Кейс
+</div>
+
+<h3 class="case-title">
+Аревик Кузнецова
+</h3>
+
 </div>
 
 <p class="case-description">
 Персональный стилист.  
-Экспертное позиционирование через fashion-медиа и lifestyle-публикации.
+Экспертное позиционирование через fashion- и lifestyle-медиа.
 </p>
 
 </div>
@@ -813,14 +901,22 @@ font-size:36px;
 <div class="case">
 
 <div class="case-top">
+
 <div>
-<div class="kicker">Кейс</div>
-<h3 class="case-title">Анастасия Журавская</h3>
+
+<div class="kicker">
+Кейс
+</div>
+
+<h3 class="case-title">
+Анастасия Журавская
+</h3>
+
 </div>
 
 <p class="case-description">
 Врач-невролог и психиатр.  
-Продвижение через доказательную медицину, комментарии и экспертные публикации.
+Продвижение через доказательную медицину, экспертные комментарии и медиа.
 </p>
 
 </div>
@@ -864,12 +960,14 @@ font-size:36px;
 <div class="container about-grid">
 
 <div class="about-photo">
-<img src="images/olaabout.jpg">
+<img src="images/olaabout.jpg" alt="Ольга Гусарова">
 </div>
 
 <div class="about-text">
 
-<div class="kicker">Обо мне</div>
+<div class="kicker">
+Обо мне
+</div>
 
 <h2>
 PR как работа с восприятием
@@ -927,7 +1025,9 @@ PR как работа с восприятием
 </div>
 
 <div class="footer-right">
-<a href="https://t.me/ground_control_to_major_tom">Telegram</a>
+<a href="https://t.me/ground_control_to_major_tom" target="_blank">
+Telegram
+</a>
 </div>
 
 </div>
