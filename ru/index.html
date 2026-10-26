@@ -1,0 +1,1035 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+<title>Ольга Гусарова — PR, медиа и коммуникационная стратегия</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+
+:root{
+--bg:#f4f1eb;
+--text:#151515;
+--muted:#76716a;
+--line:#d8d1c7;
+}
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+background:var(--bg);
+color:var(--text);
+font-family:'Inter',sans-serif;
+-webkit-font-smoothing:antialiased;
+line-height:1.6;
+}
+
+img{
+max-width:100%;
+display:block;
+}
+
+.container{
+width:min(1380px,92%);
+margin:0 auto;
+}
+
+section{
+padding:120px 0;
+border-bottom:1px solid var(--line);
+}
+
+/* NAV */
+
+nav{
+padding:26px 0;
+position:sticky;
+top:0;
+z-index:100;
+backdrop-filter:blur(14px);
+background:rgba(244,241,235,.88);
+border-bottom:1px solid rgba(0,0,0,.04);
+}
+
+.nav-inner{
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.logo{
+font-family:'Cormorant Garamond',serif;
+font-size:34px;
+font-weight:700;
+letter-spacing:.02em;
+}
+
+.nav-links{
+display:flex;
+gap:34px;
+align-items:center;
+}
+
+.nav-links a{
+text-decoration:none;
+color:var(--text);
+font-size:13px;
+letter-spacing:.12em;
+text-transform:uppercase;
+}
+
+/* HERO */
+
+.hero{
+padding-top:70px;
+padding-bottom:90px;
+}
+
+.hero-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:80px;
+align-items:center;
+}
+
+.kicker{
+font-size:13px;
+letter-spacing:.18em;
+text-transform:uppercase;
+color:var(--muted);
+margin-bottom:26px;
+}
+
+.hero h1{
+font-family:'Cormorant Garamond',serif;
+font-size:88px;
+line-height:.92;
+font-weight:700;
+letter-spacing:-.04em;
+margin-bottom:34px;
+max-width:720px;
+}
+
+.hero-sub{
+font-size:22px;
+max-width:560px;
+margin-bottom:42px;
+line-height:1.45;
+}
+
+.hero-buttons{
+display:flex;
+gap:18px;
+flex-wrap:wrap;
+margin-bottom:46px;
+}
+
+.btn{
+padding:18px 32px;
+text-decoration:none;
+font-size:13px;
+letter-spacing:.12em;
+text-transform:uppercase;
+transition:.3s;
+}
+
+.btn-dark{
+background:#111;
+color:#fff;
+}
+
+.btn-dark:hover{
+background:#000;
+transform:translateY(-2px);
+}
+
+.btn-light{
+border:1px solid #111;
+color:#111;
+}
+
+.btn-light:hover{
+background:#111;
+color:#fff;
+}
+
+.hero-image{
+height:760px;
+overflow:hidden;
+position:relative;
+background:#ddd;
+}
+
+.hero-image img{
+width:100%;
+height:100%;
+object-fit:cover;
+filter:grayscale(100%);
+}
+
+.hero-image::after{
+content:'';
+position:absolute;
+inset:0;
+background:rgba(0,0,0,.08);
+}
+
+/* LOGOS */
+
+.logos{
+padding:60px 0;
+}
+
+.logo-row{
+display:flex;
+gap:64px;
+align-items:center;
+justify-content:center;
+flex-wrap:wrap;
+opacity:.55;
+}
+
+.logo-row img{
+height:34px;
+width:auto;
+object-fit:contain;
+
+filter:
+grayscale(100%)
+brightness(.2)
+opacity(.75);
+
+transition:.3s ease;
+}
+
+.logo-row img:hover{
+opacity:1;
+
+filter:
+grayscale(100%)
+brightness(.05);
+}
+
+/* THESIS */
+
+.thesis-grid{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:26px;
+}
+
+.thesis-card{
+padding:44px;
+border:1px solid var(--line);
+background:rgba(255,255,255,.28);
+min-height:260px;
+display:flex;
+flex-direction:column;
+justify-content:space-between;
+}
+
+.thesis-number{
+font-size:13px;
+letter-spacing:.14em;
+text-transform:uppercase;
+color:var(--muted);
+margin-bottom:26px;
+}
+
+.thesis-card h3{
+font-family:'Cormorant Garamond',serif;
+font-size:42px;
+line-height:1;
+margin-bottom:24px;
+}
+
+.thesis-card p{
+font-size:18px;
+max-width:92%;
+}
+
+/* TITLES */
+
+.section-title{
+font-family:'Cormorant Garamond',serif;
+font-size:76px;
+line-height:.94;
+margin-bottom:28px;
+}
+
+.section-intro{
+max-width:780px;
+font-size:21px;
+margin-bottom:70px;
+}
+
+/* SERVICES */
+
+.services-grid{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:28px;
+}
+
+.service{
+padding:48px;
+border:1px solid var(--line);
+background:rgba(255,255,255,.28);
+}
+
+.service h3{
+font-family:'Cormorant Garamond',serif;
+font-size:48px;
+line-height:1;
+margin-bottom:24px;
+}
+
+.service p{
+font-size:18px;
+margin-bottom:30px;
+color:#232323;
+}
+
+.price{
+font-size:13px;
+letter-spacing:.14em;
+text-transform:uppercase;
+color:var(--muted);
+}
+
+/* CASES */
+
+.case{
+margin-bottom:150px;
+}
+
+.case:last-child{
+margin-bottom:0;
+}
+
+.case-top{
+display:flex;
+justify-content:space-between;
+align-items:flex-end;
+gap:50px;
+margin-bottom:42px;
+}
+
+.case-title{
+font-family:'Cormorant Garamond',serif;
+font-size:66px;
+line-height:.94;
+}
+
+.case-description{
+max-width:520px;
+font-size:18px;
+}
+
+.media-grid{
+display:grid;
+gap:18px;
+}
+
+.media-grid.ilya{
+grid-template-columns:2fr 1fr 1fr;
+grid-auto-rows:240px;
+}
+
+.media-grid.stylist{
+grid-template-columns:1.3fr 1fr 1fr;
+grid-auto-rows:240px;
+}
+
+.media-grid.doctor{
+grid-template-columns:1.6fr 1fr 1fr;
+grid-auto-rows:240px;
+}
+
+.media-item{
+overflow:hidden;
+background:#e9e2d8;
+position:relative;
+}
+
+.media-item img{
+width:100%;
+height:100%;
+object-fit:cover;
+transition:1s;
+}
+
+.media-item:hover img{
+transform:scale(1.03);
+}
+
+.big{
+grid-row:span 2;
+}
+
+.wide{
+grid-column:span 2;
+}
+
+/* ABOUT */
+
+.about-grid{
+display:grid;
+grid-template-columns:.8fr 1.2fr;
+gap:80px;
+align-items:center;
+}
+
+.about-photo{
+height:720px;
+overflow:hidden;
+background:#ddd8cf;
+}
+
+.about-photo img{
+width:100%;
+height:100%;
+object-fit:cover;
+object-position:center;
+display:block;
+}
+
+.about-text h2{
+font-family:'Cormorant Garamond',serif;
+font-size:72px;
+line-height:.94;
+margin-bottom:30px;
+}
+
+.about-text p{
+font-size:20px;
+margin-bottom:24px;
+max-width:720px;
+}
+
+/* CTA */
+
+.cta{
+text-align:center;
+padding:160px 0;
+}
+
+.cta h2{
+font-family:'Cormorant Garamond',serif;
+font-size:88px;
+line-height:.92;
+max-width:960px;
+margin:0 auto 36px;
+}
+
+.cta p{
+font-size:22px;
+max-width:760px;
+margin:0 auto 44px;
+}
+
+/* FOOTER */
+
+footer{
+padding:44px 0;
+}
+
+.footer-inner{
+display:flex;
+justify-content:space-between;
+align-items:center;
+gap:30px;
+flex-wrap:wrap;
+}
+
+.footer-left{
+font-family:'Cormorant Garamond',serif;
+font-size:34px;
+font-weight:700;
+}
+
+.footer-right{
+display:flex;
+gap:24px;
+}
+
+.footer-right a{
+text-decoration:none;
+color:var(--text);
+font-size:13px;
+letter-spacing:.12em;
+text-transform:uppercase;
+}
+
+/* MOBILE */
+
+@media(max-width:980px){
+
+.hero-grid,
+.about-grid,
+.services-grid,
+.thesis-grid{
+grid-template-columns:1fr;
+}
+
+.hero h1{
+font-size:64px;
+}
+
+.section-title,
+.about-text h2,
+.case-title,
+.cta h2{
+font-size:54px;
+}
+
+.hero-image{
+height:500px;
+}
+
+.media-grid.ilya,
+.media-grid.stylist,
+.media-grid.doctor{
+grid-template-columns:1fr;
+grid-auto-rows:260px;
+}
+
+.big,
+.wide{
+grid-column:auto;
+grid-row:auto;
+}
+
+.case-top{
+flex-direction:column;
+align-items:flex-start;
+}
+
+}
+
+@media(max-width:640px){
+
+.hero h1{
+font-size:50px;
+}
+
+.hero-sub,
+.section-intro,
+.about-text p,
+.cta p{
+font-size:18px;
+}
+
+.hero-image{
+height:420px;
+}
+
+.thesis-card h3,
+.service h3{
+font-size:38px;
+}
+
+}
+
+.media-links{display:flex;flex-wrap:wrap;gap:10px;margin:18px 0 26px}.media-links a{font-size:13px;color:#111;border-bottom:1px solid #777;text-decoration:none}.nav-links{flex-wrap:wrap}@media(max-width:640px){nav{padding:12px 0}.logo{font-size:23px}.nav-inner{gap:10px}.nav-links{gap:10px}.nav-links a{font-size:11px}} </style>
+<link rel="alternate" hreflang="en" href="https://dvlnsd.github.io/Ola-pr-website/"/><link rel="alternate" hreflang="ru" href="https://dvlnsd.github.io/Ola-pr-website/ru/"/><link rel="canonical" href="https://dvlnsd.github.io/Ola-pr-website/ru/"/></head>
+
+<body>
+
+<nav>
+
+<div class="container nav-inner">
+
+<div class="logo">
+ОЛЬГА ГУСАРОВА
+</div>
+
+<div class="nav-links">
+<a href="#services">Услуги</a><a href="https://dvlnsd.github.io/Ola-pr-website/" lang="en" style="font-weight:700;border:1px solid currentColor;padding:8px 12px">EN</a>
+<a href="#cases">Кейсы</a>
+<a href="#about">Обо мне</a>
+<a href="https://t.me/ground_control_to_major_tom" target="_blank">Telegram</a>
+</div>
+
+</div>
+
+</nav>
+
+<section class="hero">
+
+<div class="container hero-grid">
+
+<div>
+
+<div class="kicker">
+Стратегический PR • Медийное позиционирование • Репутация
+</div>
+
+<h1>
+Стратегический PR и медийное позиционирование для экспертов и wellness-проектов
+</h1>
+
+<p class="hero-sub">
+Помогаю экспертам и организациям находить сильные информационные поводы, превращать сложные темы в истории для СМИ и выстраивать профессиональную репутацию.
+</p>
+
+<div class="hero-buttons">
+
+<a href="https://t.me/ground_control_to_major_tom" target="_blank" class="btn btn-dark">
+Обсудить проект
+</a>
+
+<a href="#cases" class="btn btn-light">
+Смотреть кейсы
+</a>
+
+</div>
+
+</div>
+
+<div class="hero-image">
+<img src="../images/hero.jpg" alt="">
+</div>
+
+</div>
+
+</section>
+
+<section class="logos">
+
+<div class="container">
+
+<div class="logo-row">
+
+<img src="../images/Forbes.png" alt="Forbes">
+
+<img src="../images/Men_Today_idn96qUO9C_1.svg" alt="Men Today">
+
+<img src="../images/Вокруг_света_idKF4YMesT_1.svg" alt="Вокруг Света">
+
+<img src="../images/Лента-ру_id9PU_kbiH_1.svg" alt="Лента.ру">
+
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<div class="container">
+
+<div class="thesis-grid">
+
+<div class="thesis-card">
+
+<div>
+
+<div class="thesis-number">01</div>
+
+<h3>
+Публичный образ влияет на восприятие вашей ценности.
+</h3>
+
+</div>
+
+<p>
+Экспертность без присутствия в информационном поле остаётся незаметной.
+</p>
+
+</div>
+
+<div class="thesis-card">
+
+<div>
+
+<div class="thesis-number">02</div>
+
+<h3>
+Профессиональный авторитет формируется публично.
+</h3>
+
+</div>
+
+<p>
+Сильным специалистам нужна сильная репутация.
+</p>
+
+</div>
+
+<div class="thesis-card">
+
+<div>
+
+<div class="thesis-number">03</div>
+
+<h3>
+Люди выбирают тех, кого уже знают.
+</h3>
+
+</div>
+
+<p>
+Медийность сокращает дистанцию между вами и аудиторией.
+</p>
+
+</div>
+
+<div class="thesis-card">
+
+<div>
+
+<div class="thesis-number">04</div>
+
+<h3>
+PR — это архитектура доверия.
+</h3>
+
+</div>
+
+<p>
+Публикации, комментарии и медиа формируют долгосрочное восприятие специалиста.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="services">
+
+<div class="container">
+
+<h2 class="section-title">
+Направления работы
+</h2>
+
+<p class="section-intro">
+Работаю с экспертами, wellness-проектами и специалистами, которым важно выстроить устойчивое профессиональное присутствие в медиа и публичном поле.
+</p>
+
+<div class="services-grid">
+
+<div class="service">
+
+<h3>
+PR-сопровождение
+</h3>
+
+<p>
+Долгосрочная работа с репутацией, медийностью и публичным образом специалиста.  
+Инфоповоды, публикации, комментарии, коллаборации и стратегия присутствия.
+</p>
+
+<div class="price">
+от 100 000 ₽ / месяц
+</div>
+
+</div>
+
+<div class="service">
+
+<h3>
+Публикации в СМИ
+</h3>
+
+<p>
+Статьи, комментарии, экспертные материалы, колонки и работа с редакциями российских и международных медиа.
+</p>
+
+<div class="price">
+от 10 000 ₽
+</div>
+
+</div>
+
+<div class="service">
+
+<h3>
+PR-стратегия
+</h3>
+
+<p>
+Коммуникационная архитектура бренда: медиавекторы, позиционирование, темы и долгосрочная стратегия присутствия.
+</p>
+
+<div class="price">
+от 50 000 ₽
+</div>
+
+</div>
+
+<div class="service">
+
+<h3>
+Консультации
+</h3>
+
+<p>
+Разбор текущего позиционирования, медийности и репутации.  
+Подходит экспертам и брендам, которым нужен стратегический внешний взгляд.
+</p>
+
+<div class="price">
+15 000 ₽
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="cases">
+
+<div class="container">
+
+<div class="case">
+
+<div class="case-top">
+
+<div>
+
+<div class="kicker">
+Кейс
+</div>
+
+<h3 class="case-title">
+Илья Чайка
+</h3>
+
+</div>
+
+<p class="case-description">
+Профессиональный серфер и организатор премиальных серф-проектов.  
+Медийное позиционирование через lifestyle, wellness и бизнес-контекст.
+</p>
+
+</div>
+
+<div class="media-links"><a href="https://www.forbes.ru/forbeslife/543538-serfing-novyj-netvorking-kak-sport-korolej-stal-popularnym-u-predprinimatelej" target="_blank" rel="noopener">Forbes Life ↗</a></div><div class="media-grid ilya">
+
+<div class="media-item big">
+<img src="../images/forbessurfilyablack.jpg">
+</div>
+
+<div class="media-item">
+<img src="../images/mentodayilya.jpg">
+</div>
+
+<div class="media-item">
+<img src="../images/vokrugsvetailya.jpg">
+</div>
+
+<div class="media-item wide">
+<img src="../images/championatilya.jpg">
+</div>
+
+<div class="media-item">
+<img src="../images/forbesusmentionilya.jpg">
+</div>
+
+</div>
+
+</div>
+
+<div class="case">
+
+<div class="case-top">
+
+<div>
+
+<div class="kicker">
+Кейс
+</div>
+
+<h3 class="case-title">
+Аревик Кузнецова
+</h3>
+
+</div>
+
+<p class="case-description">
+Персональный стилист.  
+Экспертное позиционирование через fashion- и lifestyle-медиа.
+</p>
+
+</div>
+
+<div class="media-grid stylist">
+
+<div class="media-item big">
+<img src="../images/gazetarustylist.jpg">
+</div>
+
+<div class="media-item">
+<img src="../images/lisastylist.jpg">
+</div>
+
+<div class="media-item">
+<img src="../images/lisaexpert.jpg">
+</div>
+
+<div class="media-item wide">
+<img src="../images/atylistkp.jpg">
+</div>
+
+</div>
+
+</div>
+
+<div class="case">
+
+<div class="case-top">
+
+<div>
+
+<div class="kicker">
+Кейс
+</div>
+
+<h3 class="case-title">Анастасия Журавская</h3><p>60+ выходов за 6 месяцев · ТВ · радио · федеральные СМИ</p>
+
+</div>
+
+<p class="case-description">
+Врач-невролог и психиатр.  
+Продвижение через доказательную медицину, экспертные комментарии и медиа.
+</p>
+
+</div>
+
+<div class="media-links"><a href="https://www.psychologies.ru/articles/ya-neschasten-no-prodolzhayu-zhit-kak-prezhde-pochemu-tak-proiskhodit/" target="_blank" rel="noopener">Psychologies ↗</a><a href="https://www.forbes.ru/forbeslife/543538-serfing-novyj-netvorking-kak-sport-korolej-stal-popularnym-u-predprinimatelej" target="_blank" rel="noopener">Forbes Life ↗</a><a href="https://lenta.ru/news/2025/07/20/opasnosti-marafonov-lichnostnogo-rosta/" target="_blank" rel="noopener">Лента.ру ↗</a><a href="https://life.ru/p/1755338" target="_blank" rel="noopener">Life.ru ↗</a><a href="https://www.dv.kp.ru/daily/27729/5117842/" target="_blank" rel="noopener">КП ↗</a></div><div class="media-grid doctor">
+
+<div class="media-item big">
+<img src="../images/psy.jpg">
+</div>
+
+<div class="media-item">
+<img src="../images/doctortv.jpg">
+</div>
+
+<div class="media-item">
+<img src="../images/doctormentoday.jpg">
+</div>
+
+<div class="media-item">
+<img src="../images/gazetarudoctor.jpg">
+</div>
+
+<div class="media-item">
+<img src="../images/rtdoctor.jpg">
+</div>
+
+<div class="media-item wide">
+<img src="../images/lentarudoc.jpg">
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="about">
+
+<div class="container about-grid">
+
+<div class="about-photo">
+<img src="../images/olaabout.jpg" alt="Ольга Гусарова">
+</div>
+
+<div class="about-text">
+
+<div class="kicker">
+Обо мне
+</div>
+
+<h2>
+PR как работа с восприятием
+</h2>
+
+<p>
+Я работаю на пересечении PR, журналистики и медийного позиционирования.
+</p>
+
+<p>
+Мне интересны проекты, связанные с wellness, медициной, lifestyle и спортом — потому что я сама живу внутри этой среды.
+</p>
+
+<p>
+В своей работе я соединяю стратегическое мышление, понимание медиа и редакционную подачу.  
+Моя задача — сделать так, чтобы профессионал присутствовал не только в своей профессии, но и в публичном поле.
+</p>
+
+<p>
+Работаю с российскими и международными медиа, создаю стратегии, статьи, экспертные материалы и долгосрочное репутационное присутствие.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="cta">
+
+<div class="container">
+
+<h2>
+Сильным специалистам нужна сильная публичная репутация.
+</h2>
+
+<p>
+Если вы понимаете ценность медийного присутствия и хотите выстроить устойчивый профессиональный образ — обсудим ваш проект.
+</p>
+
+<a href="https://t.me/ground_control_to_major_tom" target="_blank" class="btn btn-dark">
+Написать в Telegram
+</a>
+
+</div>
+
+</section>
+
+<footer>
+
+<div class="container footer-inner">
+
+<div class="footer-left">
+ОЛЬГА ГУСАРОВА
+</div>
+
+<div class="footer-right">
+<a href="https://t.me/ground_control_to_major_tom" target="_blank">
+Telegram
+</a>
+</div>
+
+</div>
+
+</footer>
+
+</body>
+</html>
